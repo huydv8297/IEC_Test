@@ -448,6 +448,8 @@ public class PlayerData
         w.Write(rank);
 
         w.Close();
+
+        SaveData.PostDataToFirebase();
     }
 
 
