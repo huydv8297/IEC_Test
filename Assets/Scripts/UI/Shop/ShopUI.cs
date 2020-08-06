@@ -18,6 +18,8 @@ public class ShopUI : MonoBehaviour
     public ShopAccessoriesList accessoriesList;
     public ShopThemeList themeList;
 
+    public ShopCheatMenu cheatMenu;
+
     [Header("UI")]
     public Text coinCounter;
     public Text premiumCounter;
@@ -57,6 +59,13 @@ public class ShopUI : MonoBehaviour
     {
         coinCounter.text = PlayerData.instance.coins.ToString();
         premiumCounter.text = PlayerData.instance.premium.ToString();
+    }
+
+    public void OpenCheatMenu()
+    {
+        m_OpenList.Close();
+        cheatMenu.Open();
+        m_OpenList = cheatMenu;
     }
 
     public void OpenItemList()
